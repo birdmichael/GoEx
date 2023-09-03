@@ -17,16 +17,16 @@ go get github.com/birdmichael/GoEx
 <summary>切片包含操作</summary>
 
 ```go
-import "github.com/birdmichael/GoEx/slice"
+import "github.com/birdmichael/GoEx/goexslice"
 
 // 检查切片中是否包含特定元素
-result := slice.Contain([]int{1, 2, 3}, 2) // 返回 true
+result := goexslice.Contain([]int{1, 2, 3}, 2) // 返回 true
 
 // 检查切片中是否存在满足特定条件的元素
-result := slice.ContainBy([]int{1, 2, 3}, func(item int) bool { return item > 1 }) // 返回 true
+result := goexslice.ContainBy([]int{1, 2, 3}, func(item int) bool { return item > 1 }) // 返回 true
 
 // 检查一个切片是否包含另一个子切片
-result := slice.ContainSubSlice([]int{1, 2, 3, 4}, []int{2, 3}) // 返回 true
+result := goexslice.ContainSubgoexslice([]int{1, 2, 3, 4}, []int{2, 3}) // 返回 true
 ```
 
 </details>
@@ -36,7 +36,7 @@ result := slice.ContainSubSlice([]int{1, 2, 3, 4}, []int{2, 3}) // 返回 true
 
 ```go
 // 获取两个切片的差异元素
-diff := slice.Difference([]int{1, 2, 3, 4, 5}, []int{3, 4, 6}) // 返回 []int{1, 2, 5, 6}
+diff := goexslice.Difference([]int{1, 2, 3, 4, 5}, []int{3, 4, 6}) // 返回 []int{1, 2, 5, 6}
 ```
 
 </details>
@@ -46,7 +46,7 @@ diff := slice.Difference([]int{1, 2, 3, 4, 5}, []int{3, 4, 6}) // 返回 []int{1
 
 ```go
 // 将切片按指定的大小分割成多个子切片
-chunks := slice.Chunk([]int{1, 2, 3, 4, 5, 6, 7}, 3) // 返回 [][]int{{1, 2, 3}, {4, 5, 6}, {7}}
+chunks := goexslice.Chunk([]int{1, 2, 3, 4, 5, 6, 7}, 3) // 返回 [][]int{{1, 2, 3}, {4, 5, 6}, {7}}
 ```
 
 </details>
@@ -56,10 +56,10 @@ chunks := slice.Chunk([]int{1, 2, 3, 4, 5, 6, 7}, 3) // 返回 [][]int{{1, 2, 3}
 
 ```go
 // 在切片的开头添加一个元素
-newSlice := slice.Prepend([]int{2, 3, 4}, 1) // 返回 []int{1, 2, 3, 4}
+newslice := goexslice.Prepend([]int{2, 3, 4}, 1) // 返回 []int{1, 2, 3, 4}
 
 // 在指定索引处插入元素
-newSlice := slice.InsertAt([]int{1, 2, 3}, 1, 4) // 返回 []int{1, 4, 2, 3}
+newslice := goexslice.InsertAt([]int{1, 2, 3}, 1, 4) // 返回 []int{1, 4, 2, 3}
 ```
 
 </details>
@@ -70,7 +70,7 @@ newSlice := slice.InsertAt([]int{1, 2, 3}, 1, 4) // 返回 []int{1, 4, 2, 3}
 ```go
 // 将切片中的元素顺序颠倒
 slice := []int{1, 2, 3, 4, 5}
-slice.Reverse(slice) // slice 现在是 []int{5, 4, 3, 2, 1}
+goexslice.Reverse(goexslice) // slice 现在是 []int{5, 4, 3, 2, 1}
 ```
 
 </details>
